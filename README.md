@@ -1,5 +1,5 @@
 
-# Course Project for "Getting and Cleaning Data" course.
+# Course Project for "Getting and Cleaning Data" coursera course.
 
 [Comes from](https://github.com/tobybot11/getdata-034-course-project)
 
