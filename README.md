@@ -1,5 +1,6 @@
 
 # Course Project for "Getting and Cleaning Data" coursera course.
+Original work .. Tobias Ford <toby.ford@pobox.com>
 
 [Comes from](https://github.com/tobybot11/getdata-034-course-project)
 
