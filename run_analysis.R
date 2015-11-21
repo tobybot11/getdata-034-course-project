@@ -1,14 +1,23 @@
 run_analysis <- function() {
 
-    # assumes the UCI HAR Dataset is unzipped in the current directory..
-    # .gitignore ignores the zipe file and the UCI HAR Dataset directory
-
-setwd('./UCI\ HAR\ Dataset/')
-d <- dir()
+    # load dplyr library
+    # tdf - how to check if it is there and this works?
+    library(dplyr)
+    
+# assumes the UCI HAR Dataset is unzipped in the current directory..
+# .gitignore ignores the zip file and the UCI HAR Dataset directory
+# tdf - check to see if the directory is there 
+    setwd('./UCI\ HAR\ Dataset/')
+# tdf - check to ensure files I'm assume are there are there
+    d <- dir()
 
 # LOAD the feature list
-features_raw <- read.table("features.txt")
-features <- as.character(features_raw$V2)
+    features_raw <- read.table("features.txt")
+    features <- as.character(features_raw$V2)
+
+    # LOAD the labels file
+    activities <- read.table("activity_labels.txt")
+    colnames(activities) = c("activities_id", "activity")
 
 # LOAD the data in from the files
 # data is split between test and train.. need to merge them together
@@ -20,8 +29,9 @@ x_test <- read.table("test/X_test.txt")
 
 # Create a unified data.frame.. using native R calls
 sydf_test <- data.frame(subject_test, y_test)
-# tdf - should i add in the long name of the activity?
-colnames(sydf_test) <- c('subject', 'activity')
+colnames(sydf_test) <- c('subject', 'activities_id')
+# tdf - should i add in the long name of the activity? yes!
+sydf_test <- left_join(sydf_test, activities)
 colnames(x_test) <- features
 syxdf_test <-data.frame(sydf_test, x_test)
 
@@ -32,8 +42,9 @@ x_train <- read.table("train/X_train.txt")
 
 # Create a unified data.frame.. using native R calls
 sydf_train <- data.frame(subject_train, y_train)
-# tdf - should i add in the long name of the activity?
-colnames(sydf_train) <- c('subject', 'activity')
+colnames(sydf_train) <- c('subject', 'activities_id')
+# tdf - should i add in the long name of the activity? yes!
+sydf_train <- left_join(sydf_train, activities)
 colnames(x_train) <- features
 syxdf_train <-data.frame(sydf_train, x_train)
 
@@ -46,7 +57,7 @@ syx_mean_std_df <- syx_df[, grep("(subject|activity|mean|std)", names(syx_df), v
 # tdf - would be cool to create a timers file to keep track of how long each run took.. 
 print(head(syx_mean_std_df))
 
-# 3. Uses descriptive activity names to name the activities in the data set
+# 3. Uses descriptive activity names to name the activities in the data set - DONE above
 
 # 4. Appropriately labels the data set with descriptive variable names
 
