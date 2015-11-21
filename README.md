@@ -24,4 +24,5 @@ Steps needed by run_analysis.R
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-execute run_analysis.R and then a file will be output tidy_data.txt
+execute "Rscript run_analysis.R" and then a file will be output
+tidy_data.txt with the tidy data in it
