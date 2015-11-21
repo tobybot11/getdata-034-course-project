@@ -26,3 +26,5 @@ Steps needed by run_analysis.R
 
 execute "Rscript run_analysis.R" and then a file will be output
 tidy_data.txt with the tidy data in it
+
+requires dplyr library and the UCI HAR Dataset unzipped in this directory

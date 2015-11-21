@@ -12,37 +12,60 @@ Subject
 	A number representing the subject testing the device
 
 Mean and Standard Deviation Measurements
-	"TimeBodyAccMeanX|Y|Z"
-	"TimeBodyAccStdX|Y|Z"
+	 TimeBodyAccMeanX|Y|Z 
+	 TimeBodyAccStdX|Y|Z 
 
-	"TimeGravityAccMeanX|Y|Z"
-	"TimeGravityAccStdX|Y|Z"
+	 TimeGravityAccMeanX|Y|Z 
+	 TimeGravityAccStdX|Y|Z 
 
-	"TimeBodyAccJerkMeanX|Y|Z"
-	"TimeBodyAccJerkStdX|Y|Z"
+	 TimeBodyAccJerkMeanX|Y|Z 
+	 TimeBodyAccJerkStdX|Y|Z 
+ 
+	 TimeBodyGyroMeanX|Y|Z 
+	 TimeBodyGyroStdX|Y|Z 
 
-	"TimeBodyGyroMeanX|Y|Z"
-	"TimeBodyGyroStdX|Y|Z"
+	 TimeBodyGyroJerkMeanX|Y|Z 
+	 TimeBodyGyroJerkStdX|Y|Z 
 
-	"TimeBodyGyroJerkMeanX|Y|Z"
-	"TimeBodyGyroJerkStdX|Y|Z"
+	 TimeBodyAccMagMean 
+	 TimeBodyAccMagStd 
 
-	"TimeBodyAccMagMean"
-	"TimeBodyAccMagStd"
+	 TimeGravityAccMagMean 
+	 TimeGravityAccMagStd 
 
-	"TimeGravityAccMagMean"
-	"TimeGravityAccMagStd"
+	 TimeBodyAccJerkMagMean 
+	 TimeBodyAccJerkMagStd 
 
-	"TimeBodyAccJerkMagMean"
-	"TimeBodyAccJerkMagStd"
+	 TimeBodyGyroMagMean 
+	 TimeBodyGyroMagStd 
 
-	"TimeBodyGyroMagMean"
-	"TimeBodyGyroMagStd"
+	 TimeBodyGyroJerkMagMean 
+	 TimeBodyGyroJerkMagStd 
 
-	"TimeBodyGyroJerkMagMean"
-	"TimeBodyGyroJerkMagStd"
+	 FreqBodyAccMeanX|Y|Z 
+	 FreqBodyAccStdX|Y|Z 
 
-	"FreqBodyAccMeanX|Y|Z"
-	"FreqBodyAccStdX|Y|Z"
-
-	"FreqBodyAccMeanFreqX" "FreqBodyAccMeanFreqY" "FreqBodyAccMeanFreqZ" "FreqBodyAccJerkMeanX" "FreqBodyAccJerkMeanY" "FreqBodyAccJerkMeanZ" "FreqBodyAccJerkStdX" "FreqBodyAccJerkStdY" "FreqBodyAccJerkStdZ" "FreqBodyAccJerkMeanFreqX" "FreqBodyAccJerkMeanFreqY" "FreqBodyAccJerkMeanFreqZ" "FreqBodyGyroMeanX" "FreqBodyGyroMeanY" "FreqBodyGyroMeanZ" "FreqBodyGyroStdX" "FreqBodyGyroStdY" "FreqBodyGyroStdZ" "FreqBodyGyroMeanFreqX" "FreqBodyGyroMeanFreqY" "FreqBodyGyroMeanFreqZ" "FreqBodyAccMagMean" "FreqBodyAccMagStd" "FreqBodyAccMagMeanFreq" "FreqBodyBodyAccJerkMagMean" "FreqBodyBodyAccJerkMagStd" "FreqBodyBodyAccJerkMagMeanFreq" "FreqBodyBodyGyroMagMean" "FreqBodyBodyGyroMagStd" "FreqBodyBodyGyroMagMeanFreq" "FreqBodyBodyGyroJerkMagMean" "FreqBodyBodyGyroJerkMagStd" "FreqBodyBodyGyroJerkMagMeanFreq" "angletBodyAccMean.gravity" "angletBodyAccJerkMean.gravityMean" "angletBodyGyroMean.gravityMean" "angletBodyGyroJerkMean.gravityMean" "angleX.gravityMean" "angleY.gravityMean" "angleZ.gravityMean"
+	 FreqBodyAccMeanFreqX|Y|Z 
+	 FreqBodyAccJerkMeanX|Y|Z 
+	 FreqBodyAccJerkStdX|Y|Z 
+	 FreqBodyAccJerkMeanFreqX|Y|Z 
+	 FreqBodyGyroMeanX|Y|Z  
+	 FreqBodyGyroStdX|Y|Z 
+	 FreqBodyGyroMeanFreqX|Y|Z 
+	 FreqBodyAccMagMean 
+	 FreqBodyAccMagStd 
+	 FreqBodyAccMagMeanFreq 
+	 FreqBodyBodyAccJerkMagMean 
+	 FreqBodyBodyAccJerkMagStd 
+	 FreqBodyBodyAccJerkMagMeanFreq 
+	 FreqBodyBodyGyroMagMean 
+	 FreqBodyBodyGyroMagStd 
+	 FreqBodyBodyGyroMagMeanFreq 
+	 FreqBodyBodyGyroJerkMagMean 
+	 FreqBodyBodyGyroJerkMagStd 
+	 FreqBodyBodyGyroJerkMagMeanFreq 
+	 angleTimeBodyAccMean.gravity 
+	 angleTimeBodyAccJerkMean.gravityMean 
+	 angleTimeBodyGyroMean.gravityMean 
+	 angleTimeBodyGyroJerkMean.gravityMean 
+	 angleX|Y|Z.gravityMean 
