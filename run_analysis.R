@@ -11,10 +11,17 @@ run_analysis <- function() {
 # tdf - check to ensure files I'm assume are there are there
     d <- dir()
 
-# LOAD the feature list
+# LOAD the feature list and transform it into something more readable
     features_raw <- read.table("features.txt")
     features <- as.character(features_raw$V2)
-
+    features <- gsub('mean', 'Mean', features)
+    features <- gsub('std', 'Std', features)
+    features <- gsub('-', '', features)
+    features <- gsub('\\)', '', features)
+    features <- gsub('\\(', '', features)
+    features <- gsub('^t', 'Time', features)
+    features <- gsub('^f', 'Freq', features)
+    
     # LOAD the labels file
     activities <- read.table("activity_labels.txt")
     colnames(activities) = c("activities_id", "activity")
@@ -52,14 +59,13 @@ syxdf_train <-data.frame(sydf_train, x_train)
 syx_df <- rbind(syxdf_test, syxdf_train)
 
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement
-syx_mean_std_df <- syx_df[, grep("(subject|activity|mean|std)", names(syx_df), value = TRUE)]
+syx_mean_std_df <- syx_df[, grep("(subject|activity|Mean|Std)", names(syx_df), value = TRUE)]
 
 # tdf - would be cool to create a timers file to keep track of how long each run took.. 
 print(head(syx_mean_std_df))
 
 # 3. Uses descriptive activity names to name the activities in the data set - DONE above
-
-# 4. Appropriately labels the data set with descriptive variable names
+# 4. Appropriately labels the data set with descriptive variable names - DONE above
 
 # 5. From the data set in step 4.. creates a second, independent tidy data set 
 # with the average of each variable for each activity and each subject.
@@ -68,7 +74,8 @@ print(head(syx_mean_std_df))
 # closure
 setwd('..')
 
-syx_mean_std_df
+aggregate(. ~ activity + subject, FUN="mean", data=syx_mean_std_df)
 }
 
-syx_mean_std_df <- run_analysis()
+options(digits=3)
+tidy_data <- run_analysis()
